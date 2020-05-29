@@ -1,0 +1,71 @@
+body {
+    padding: 0%;
+}
+
+td {
+    padding: 10px;
+}
+
+tr>td {
+    padding: 0px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    height: 100px;
+    border-radius: 2%;
+    border: solid 1px;
+}
+
+canvas {
+    border: solid whitesmoke 1px;
+    cursor: url('/static/img/cursor.gif'), default;
+}
+
+.herramientas {
+    width: 100px;
+}
+
+.herramientas div {
+    background-color: black;
+}
+
+.herramientas div:hover {
+    border: solid red 1px;
+    transform: scale(1.2);
+    border-radius: 5%;
+}
+
+.herramientas img:hover {
+    border: solid red 1px;
+    transform: scale(1.2);
+    border-radius: 5%;
+}
+
+div.inline {
+    float: left;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+div.lienzo {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 2%;
+    border: solid 1px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}

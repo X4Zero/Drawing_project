@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digits</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+
+</head>
+
+
+<body style="background-color: skyblue;">
+    <div class="inline">
+        <canvas width="500" height="500" id="canvas" onmousemove="pintar(event);" onmousedown="activar();" onmouseup="desactivar();"></canvas>
+
+    </div>
+
+    <div class="herramientas inline lienzo bg-light">
+
+        <h1>Dígitos</h1>
+        <hr>
+        <h6>Dibuja un número en el lienzo y presiona el botón Probar</h6>
+        <table>
+            <tbody>
+                <tr>
+
+                    <td>
+                        <h6>Lápiz</h6>
+                        <a href="#" onclick="lapiz();"><img src="{{url_for('static',filename='img/lapiz.png')}}" /></a>
+                    </td>
+                    <td>
+                        <h6>Borrador</h6>
+                        <a href="#" onclick="borrador();"><img src="{{url_for('static',filename='img/borrador.png')}}" /></a>
+                    </td>
+                    <td>
+                        <h6>Color</h6>
+                        <input type="color" id="colores" value="#ffffff" onchange="scolor();" />
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <h6>Opciones</h6>
+        <a href="#" download="canvas.png" id="guardarimagen" type="button" role="button" class="btn btn-outline-primary mr-2">Guardar como imagen</a>
+
+        <button type="button" onclick="limpiar()" class="btn btn-outline-danger mr-2">
+                Limpiar
+            </button>
+
+        <!-- <button type="button" onclick="recorte()" class="btn btn-primary">
+                Recorte
+            </button> -->
+
+        <button type="button" onclick="solicitud()" class="btn btn-outline-success mr-2">
+                Probar
+            </button>
+
+        <br>
+        <br>
+        <h6>Recomendaciones</h6>
+
+        <ul>
+            <li>Dibuje números grandes</li>
+            <li>Dibuje al centro</li>
+        </ul>
+
+
+    </div>
+
+    <div class="inline lienzo bg-light" id='resultados' style="display: none;">
+
+
+        <h1>Resultados</h1>
+        <hr>
+        <table>
+            <thead>
+                <th>Clase - Probabilidad</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id='res1'></td>
+                </tr>
+                <tr>
+                    <td id='res2'></td>
+                </tr>
+                <tr>
+                    <td id='res3'></td>
+                </tr>
+                <tr>
+                    <td id='res4'></td>
+                </tr>
+                <tr>
+                    <td id='res5'></td>
+                </tr>
+                <tr>
+                    <td id='res6'></td>
+                </tr>
+                <tr>
+                    <td id='res7'></td>
+                </tr>
+                <tr>
+                    <td id='res8'></td>
+                </tr>
+                <tr>
+                    <td id='res9'></td>
+                </tr>
+                <tr>
+                    <td id='res10'></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="button" class="btn btn-primary">
+            El número es:  <span class="badge badge-light" id="resultado">4</span>
+          </button>
+
+    </div>
+
+    <!-- <footer class="bg-light">
+        <h3>Este programa te dice que número es el que dibujaste en el lienzo, usando deep learning</h3>
+    </footer> -->
+
+    <!-- <br class="clearBoth" /> -->
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+
+
+
+</html>
